@@ -1,0 +1,11 @@
+.event-index .box-photo {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.event-index .box-photo p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 15px;
+}
