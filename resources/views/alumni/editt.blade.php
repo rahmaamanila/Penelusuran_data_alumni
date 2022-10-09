@@ -408,7 +408,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                           <label for="foto" class="form-label">Ubah Gambar</label>
                           <div class="input-group mb-3">
-                            <input type="file" name="foto" class="form-control" id="foto">
+                            <input type="file" name="foto" value="{{ $alumni->foto }}" class="form-control" id="foto">
                           </div>
                         </div>
 

@@ -313,6 +313,18 @@ class AlumniController extends Controller
                 // 'foto' => $awal,
                 'role' => 'alumni'
             ];
+
+            // if($request->hasFile('foto')) {
+            //     $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
+            //     // dd($request->file('foto')->getClientOriginalName());
+            //     $alumni2 = array('foto' => $request->file('foto')->getClientOriginalName());
+            //     // dd(array_merge($alumni, $alumni2)); 
+            //     $createAlumni = Alumni::create(array_merge($ubah, $alumni2));
+            //     $createAlumni->save();
+            // } else {
+            //     Alumni::create($data);
+            // }
+
         // } catch (\Throwable $th) {
         //     // dd($th);
         // }
