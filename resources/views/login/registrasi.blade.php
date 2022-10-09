@@ -24,7 +24,7 @@
     <div class="card">
       <div class="card-body register-card-body">
 
-                    <form action="/simpanregistrasi" method="post">
+                    <form action="/simpanregistrasi" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group">
@@ -138,7 +138,7 @@
                         <div class="form-group">
                             <label>Tahun Lulus</label>
                                 <!-- <input type="number" name="thn_lulus" class="form-control" placeholder="Masukkan Tahun" value="{{ old('thn_lulus') }}"> -->
-                                <select name="thn_lulus" id="thn_lulus" value="{{ old('thn_lulus') }}">
+                                <select name="thn_lulus" id="thn_lulus" class="form-control" value="{{ old('thn_lulus') }}">
                                     @for($i=date('Y'); $i>=date('Y')-32; $i-=1)
                                         <option value="{{ $i }}">{{ $i }}</option>
                                     @endfor
@@ -296,6 +296,13 @@
                             @endif
                         </div>
  
+                            <div class="form-group">
+                                <label for="foto" class="form-label">Upload Gambar</label>
+                                <div class="input-group mb-3">
+                                    <input type="file" name="foto" class="form-control" id="foto">
+                                </div>
+                            </div>
+
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
                             <a href="/login" class="btn btn-primary">Kembali</a>

@@ -12,7 +12,7 @@ class Alumni extends Authenticatable
     protected $table = 'alumni';
     protected $primaryKey = 'nik';
     protected $fillable = [
-        'nik','id_perusahaan', 'id_jabatan', 'nama', 'tmpt_lahir', 'tgl_lahir', 'jenkel', 'agama', 'no_telp', 'alamat', 'thn_lulus', 'angkatan', 'email', 'password', 'status', 'tgl_masuk', 'role', 'id_user'
+        'nik','id_perusahaan', 'id_jabatan', 'nama', 'tmpt_lahir', 'tgl_lahir', 'jenkel', 'agama', 'no_telp', 'alamat', 'thn_lulus', 'angkatan', 'email', 'password', 'status', 'tgl_masuk', 'role', 'id_user', 'foto'
     ];
 
     protected $hidden = [

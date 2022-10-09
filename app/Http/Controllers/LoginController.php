@@ -89,7 +89,7 @@ class LoginController extends Controller
                 'password' => bcrypt($request->password)
             ]);
  
-            Alumni::create([
+            $alumni = [
                 'nik' => $request->nik,
                 'id_perusahaan' => $request->id_perusahaan,
                 'id_jabatan' => $request->id_jabatan,
@@ -108,7 +108,19 @@ class LoginController extends Controller
                 'tgl_masuk' => $request->tgl_masuk,
                 'id_user' => $insert->id,
                 'role' => 'alumni'
-            ]);
+            ];
+
+            if($request->hasFile('foto')) {
+                $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
+                // dd($request->file('foto')->getClientOriginalName());
+                $alumni2 = array('foto' => $request->file('foto')->getClientOriginalName());
+                // dd(array_merge($alumni, $alumni2)); 
+                $createAlumni = Alumni::create(array_merge($alumni, $alumni2));
+                $createAlumni->save();
+            } else {
+                Alumni::create($alumni);
+            }
+
         } catch (\Throwable $th) {
             dd($th);
         }

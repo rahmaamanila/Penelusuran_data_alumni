@@ -47,7 +47,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     Tambah alumni 
                 </div> -->
                 <div class="card-body">
-                    <form method="post" action="/alumni/store">
+                    <form method="post" action="/alumni/store" enctype="multipart/form-data">
  
                         {{ csrf_field() }}
  
@@ -167,7 +167,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                             <label>Tahun Lulus</label>
                             <!-- <input type="number" name="thn_lulus" class="form-control" placeholder="Masukkan Tahun" value="{{ old('thn_lulus') }}"> -->
-                            <select name="thn_lulus" id="thn_lulus" value="{{ old('thn_lulus') }}">
+                            <select name="thn_lulus" id="thn_lulus" class="form-control" value="{{ old('thn_lulus') }}">
                                 @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
@@ -308,6 +308,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                                 <br>
+                                
 
                                 <!-- <div class="form-group">
                                     <label>Perusahaan</label>
@@ -354,6 +355,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     @endif
         
                                 </div> -->
+                            </div>
+
+                            <div class="form-group">
+                                <label for="foto" class="form-label">Upload Gambar</label>
+                                <div class="input-group mb-3">
+                                    <input type="file" name="foto" class="form-control" id="foto">
+                                </div>
                             </div>
                         
                         <div class="form-group">

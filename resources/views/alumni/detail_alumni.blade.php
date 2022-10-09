@@ -48,7 +48,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card card-info card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" >
+                  <!-- <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" > -->
+                  <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/'. $alumni->foto ) ?? ''}}" alt="">
                 </div><br>
                         
                             <form method="post" action="/alumni/index/{{ $alumni->nik }}">

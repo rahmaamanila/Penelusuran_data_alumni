@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     Edit Data Alumni
                 </div> -->
                 <div class="card-body">
-                    <form method="post" action="/alumni/update/{{ $alumni->nik }}">
+                    <form method="post" action="/alumni/update/{{ $alumni->nik }}" enctype="multipart/form-data">
  
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
@@ -136,17 +136,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <label for="jenkel">Jenis Kelamin</label> <br>
                             @if($alumni->jenkel == "laki-laki")
                             <div class="form-check">
-                                <label for="jenkel">
-                                    <input type="radio"  name="jenkel" id="jenkel" value="laki-laki" checked> Laki-laki
-                                    <input type="radio" name="jenkel" id="jenkel" value="perempuan"> Perempuan
-                                </label>
+                                <input type="radio"  name="jenkel" id="jenkel" value="laki-laki" checked> Laki-laki
+                                <input type="radio" name="jenkel" id="jenkel" value="perempuan"> Perempuan
                             </div>
                             @elseif($alumni->jenkel == "perempuan")
                             <div class="form-check">
-                                <label for="jenkel">
-                                    <input type="radio"  name="jenkel" id="jenkel" value="laki-laki"> Laki-laki
-                                    <input type="radio" name="jenkel" id="jenkel" value="perempuan" checked> Perempuan
-                                </label>
+                                <input type="radio"  name="jenkel" id="jenkel" value="laki-laki"> Laki-laki
+                                <input type="radio" name="jenkel" id="jenkel" value="perempuan" checked> Perempuan
                             </div>
                             @endif
                         </div>
@@ -408,6 +404,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
     
                             </div> -->
                         </div>
+
+                        <div class="form-group">
+                          <label for="foto" class="form-label">Ubah Gambar</label>
+                          <div class="input-group mb-3">
+                            <input type="file" name="foto" class="form-control" id="foto">
+                          </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                          <img src="{{ asset('img/'. $alumni->foto ) }}" height="20%" width="30%" alt="">
+                        </div> -->
  
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Edit" onclick="return confirm('Yakin ingin mengedit data?')">
