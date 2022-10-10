@@ -47,18 +47,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-md-6">
             <div class="card card-info card-outline">
               <div class="card-body box-profile">
-                <div class="text-center">
-                  <!-- <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" > -->
+                <!-- <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" >
                   <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/'. $alumni->foto ) ?? ''}}" alt="">
-                </div><br>
-                        
+                </div><br> -->
+                    <div class="mb-3 row">
+                        <img src="{{ asset('img/'. $alumni->foto ) }}" class="rounded mx-auto d-block" height="20%" width="30%" alt="">
+                    </div>
+                    <br>
                             <form method="post" action="/alumni/index/{{ $alumni->nik }}">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
 
-                            <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
-                                        <div class="form-group">
+                                        <div class="form-floating">
                                             <label for="nik" class="col-sm-6 col-form-label">Nik</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->nik }}
@@ -77,7 +80,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 
 
-                                <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
                                         <label for="nama" class="col-sm-6 col-form-label">Nama</label>
@@ -98,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="jenkel" class="col-sm-6 col-form-label">Jenis Kelamin</label>
@@ -119,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="agama" class="col-sm-6 col-form-label">Agama</label>
@@ -140,7 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="alamat" class="col-sm-6 col-form-label">Alamat</label>
@@ -161,7 +164,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row">
+                                <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <div class="col-sm-12">
