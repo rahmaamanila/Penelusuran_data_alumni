@@ -26,8 +26,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Detail Lowongan</h1>
+          <div class="col-sm-12">
+            <h1 class="m-0"><center>Detail Lowongan</center></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <!-- <ol class="breadcrumb float-sm-right">

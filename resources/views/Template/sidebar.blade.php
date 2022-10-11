@@ -42,7 +42,7 @@
           <li class="nav-item">
             <a href="{{ route('beranda') }}" class="nav-link {{ e($__env->yieldContent('menu')) == 'dashboard' ? 'active' : '' }}">
               <!-- <i class="nav-icon fas fa-tachometer-alt"></i> -->
-              <i class="nav-icon fas bi-house-fill"></i>
+              <i class="nav-icon fas bi-house-door-fill"></i>
               <p>Home</p>
             </a>
           </li>
