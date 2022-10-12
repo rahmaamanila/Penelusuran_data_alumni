@@ -296,12 +296,12 @@
                             @endif
                         </div>
  
-                            <div class="form-group">
-                                <label for="foto" class="form-label">Upload Gambar</label>
-                                <div class="input-group mb-3">
-                                    <input type="file" name="foto" class="form-control" id="foto">
-                                </div>
+                        <div class="form-group">
+                            <label for="foto" class="form-label">Upload Gambar</label>
+                            <div class="input-group mb-3">
+                                <input type="file" name="foto" class="form-control" id="foto">
                             </div>
+                        </div>
 
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Simpan">
