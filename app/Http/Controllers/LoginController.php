@@ -58,7 +58,7 @@ class LoginController extends Controller
         $messages = [
             'required' => 'Tidak boleh kosong',
             'unique' => 'Sudah terdaftar silahkan login',
-            'alpha-num' => 'Kata sandi hanya boleh berisi huruf dan angka',
+            'alpha_num' => 'Hanya boleh berisi huruf dan angka',
             'numeric' => 'Hanya menginput angka'
         ];
 
@@ -149,7 +149,7 @@ class LoginController extends Controller
                 'id_user' => $alumni->id_user,
                 'role' => $user->role,
             ]);
-            return redirect('/beranda');
+            return redirect('/login')->with('success', 'Berhasil mendaftar silahkan login');
         }else{
             return redirect('/login');
         }

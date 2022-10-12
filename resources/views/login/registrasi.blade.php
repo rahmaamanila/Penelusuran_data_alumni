@@ -105,7 +105,7 @@
                                 <option value="onghucu">Konghucu</option>		
                                 </select>
  
-                                @if($errors->has('agama'))
+                            @if($errors->has('agama'))
                                 <div class="text-danger">
                                     {{ $errors->first('agama')}}
                                 </div>
@@ -200,86 +200,54 @@
                         </div>
 
                             <div class="class-perusahaan">
-                                <!-- <div class="form-group">
-                                    <label>Perusahaan</label>
-                                        <select class="form-control" name="id_perusahaan" value="{{ old('id_perusahaan') }}">
-                                            <option value="">Pilih Perusahaan</option>
-                                            @foreach($perusahaan as $p)
-                                            <option value="{{ $p->id_perusahaan }}">{{ $p->nm_perusahaan }}</option>
-                                            @endforeach
-                                        </select>
-
-                                    @if($errors->has('id_perusahaan'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('id_perusahaan')}}
-                                    </div>
-                                    @endif
-                                </div> -->
-
                                 <div class="row">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label>Perusahaan</label>
-                                            <select class="form-control" name="id_perusahaan" value="{{ old('id_perusahaan') }}">
-                                                <option value="">Pilih Perusahaan</option>
-                                                @foreach($perusahaan as $p)
-                                                <option value="{{ $p->id_perusahaan }}">{{ $p->nm_perusahaan }}</option>
-                                                @endforeach
-                                            </select>
+                                                <select class="form-control" name="id_perusahaan" value="{{ old('id_perusahaan') }}">
+                                                    <option value="">Pilih Perusahaan</option>
+                                                    @foreach($perusahaan as $p)
+                                                    <option value="{{ $p->id_perusahaan }}">{{ $p->nm_perusahaan }}</option>
+                                                    @endforeach
+                                                </select>
                                         
-                                        @if($errors->has('id_perusahaan'))
-                                            <div class="text-danger">
-                                                {{ $errors->first('id_perusahaan')}}
-                                            </div>
-                                        @endif
+                                            @if($errors->has('id_perusahaan'))
+                                                <div class="text-danger">
+                                                    {{ $errors->first('id_perusahaan')}}
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label>Jabatan</label>
-                                            <select class="form-control" name="id_jabatan" value="{{ old('id_jabatan') }}">
-                                                <option value="">Pilih Jabatan</option>
-                                                @foreach($jabatan as $j)
-                                                <option value="{{ $j->id_jabatan }}">{{ $j->nm_jabatan }}</option>
-                                                @endforeach
-                                            </select>
+                                                <select class="form-control" name="id_jabatan" value="{{ old('id_jabatan') }}">
+                                                    <option value="">Pilih Jabatan</option>
+                                                    @foreach($jabatan as $j)
+                                                    <option value="{{ $j->id_jabatan }}">{{ $j->nm_jabatan }}</option>
+                                                    @endforeach
+                                                </select>
                                         
-                                        @if($errors->has('id_jabatan'))
-                                            <div class="text-danger">
-                                                {{ $errors->first('id_jabatan')}}
-                                            </div>
-                                        @endif
+                                            @if($errors->has('id_jabatan'))
+                                                <div class="text-danger">
+                                                    {{ $errors->first('id_jabatan')}}
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
                                 <br>
 
-                                <!-- <div class="form-group">
-                                    <label>Jabatan</label>
-                                        <select class="form-control" name="id_jabatan" value="{{ old('id_jabatan') }}">
-                                            <option value="">Pilih Jabatan</option>
-                                            @foreach($jabatan as $j)
-                                            <option value="{{ $j->id_jabatan }}">{{ $j->nm_jabatan }}</option>
-                                            @endforeach
-                                        </select>
-
-                                    @if($errors->has('id_jabatan'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('id_jabatan')}}
-                                    </div>
-                                    @endif
-                                </div> -->
-                            
                                 <div class="form-group">
                                     <label>Tanggal Masuk Kerja</label>
-                                    <input type="date" name="tgl_masuk" class="form-control" placeholder="" value="{{ old('tgl_masuk') }}">
+                                        <input type="date" name="tgl_masuk" class="form-control" placeholder="" value="{{ old('tgl_masuk') }}">
 
-                                @if($errors->has('tgl_masuk'))
-                                <div class="text-danger">
-                                    {{ $errors->first('tgl_masuk')}}
-                                </div>
-                                @endif
+                                    @if($errors->has('tgl_masuk'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('tgl_masuk')}}
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
 

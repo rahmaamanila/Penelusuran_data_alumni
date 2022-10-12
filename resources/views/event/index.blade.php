@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <br> -->
                 <div class="card-body">
-                    <a href="/event/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah Event</a>
+                    <a href="/event/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah</a>
                     <a href="/event/cetak_event_form" class="btn btn-default"><i class="fas fa-print"></i></a>
                     <br/>
                     <br/>

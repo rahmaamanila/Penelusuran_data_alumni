@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
                 <br> -->
                 <div class="card-body">
-                    <a href="/lowongan/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah Lowongan</a>
+                    <a href="/lowongan/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah</a>
                     <br/>
                     <br/>
                     <table class="table table-bordered table-hover table-striped">
