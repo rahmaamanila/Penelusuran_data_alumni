@@ -71,7 +71,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div>
-                                  <a href="{{ asset('img/'. $lowongan->foto ) }}" target="_blank" rel="noopener noreferrer">lihat gambar</a>
+                                  <a href="{{ asset('img/'. $lowongan->foto ) }}" rel="noopener noreferrer">lihat gambar</a>
                                 </div>
                             </div>
 

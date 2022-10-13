@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $p->selesai_event }}</td>
                                 <td width="30%">
                                   <img src="{{ asset('Gambar/'. $p->foto ) }}" height="10%" width="20%" alt="">
-                                  <a href="{{ asset('Gambar/'. $p->foto ) }}" target="_blank" rel="noopener noreferrer">lihat gambar</a>
+                                  <a href="{{ asset('Gambar/'. $p->foto ) }}" rel="noopener noreferrer">lihat gambar</a>
                                 </td>
                                 <td>{{ $p->keterangan }}</td>
                                 <td>

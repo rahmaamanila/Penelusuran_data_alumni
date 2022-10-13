@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td class="text-center">{{ $p->judul }}</td>
                                 <td width="30%" class="text-center">
                                   <img src="{{ asset('img/'. $p->foto ) }}" height="10%" width="20%" alt="">
-                                  <a href="{{ asset('img/'. $p->foto ) }}" target="_blank" rel="noopener noreferrer">lihat gambar</a>
+                                  <a href="{{ asset('img/'. $p->foto ) }}" rel="noopener noreferrer">lihat gambar</a>
                                 </td>
                                 <td>{{ $p->keterangan }}</td>
                                 <td>
