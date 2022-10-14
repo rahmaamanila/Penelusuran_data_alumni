@@ -292,8 +292,8 @@ class AlumniController extends Controller
         //         'password' => bcrypt($request->password)
         //     ]);
 
-        // $ubah = Alumni::where('nik',$id)->first();
-        // $awal = $ubah->foto;
+        $ubah = Alumni::where('nik',$id)->first();
+        $awal = $ubah->foto;
 
             $data = [
                 'nik' => $request->nik,
@@ -310,7 +310,7 @@ class AlumniController extends Controller
                 'password' => $request->password,
                 'status' => $request->status,
                 // 'id_user' => $insert->id,
-                // 'foto' => $awal,
+                'foto' => $awal,
                 'role' => 'alumni'
             ];
 
@@ -339,7 +339,12 @@ class AlumniController extends Controller
             $data['tgl_masuk'] = null;
         }
         
-         Alumni::where('nik',$id)->update($data);
+        if ($request->foto) {
+            $request->foto->move('img/', $awal);
+        }
+        $ubah->update($data);
+        
+        //  Alumni::where('nik',$id)->update($data);
 
          $alumni = Alumni::where('nik',$id)->first();
 
