@@ -50,7 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             {{ method_field('PUT') }}
                             
                                 <div class="mb-3 row">
-                                    <img src="{{ asset('img/'. $alumni->foto ) }}" class="rounded mx-auto d-block" height="20%" width="30%" alt="">
+                                    <img src="{{ asset('img/'. $alumni->foto ) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
                                 </div>
 
                                 <div class="row text-center">
@@ -239,5 +239,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 @include('Template.script')
+<style>
+.zoom {
+  /* padding: 30px; */
+  /* background-color: green; */
+  transition: transform .2s; /* Animation */
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+</style>
 </body>
 </html>
