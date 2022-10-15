@@ -168,7 +168,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>No Telepon</label>
-                            <input type="text" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}">
+                            <input type="number" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}">
  
                             @if($errors->has('no_telp'))
                                 <div class="text-danger">
@@ -211,7 +211,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Angkatan</label>
-                            <input type="text" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}">
+                            <input type="number" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}">
  
                             @if($errors->has('angkatan'))
                                 <div class="text-danger">

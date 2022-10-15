@@ -40,32 +40,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-header -->
 
     <!-- Main content/buat bikin sesuatu -->
-        <div class="container">
-            <div class="card mt-2">
+        <!-- <div class="container">
+            <div class="card mt-2"> -->
                 <!-- <div class="card-header">
                     Periode Tahun
                 </div> -->
                 <!-- <h3>Periode Tahun</h3> -->
-            
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card card-info card-outline">
                 <div class="card-body">
-                    <a href="/alumni" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
-                    <br>
-                    <br>
-                    <div class="form-group mb-3">
-                        <label>Periode Tahun</label>
-                        <select name="thn_lulus" id="thn_lulus">
-                            @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
-                              <option value="{{ $i }}">{{ $i }}</option>
-                            @endfor
-                        </select>
-                    </div>
-                    <div>
-                        <a href="#" onclick="this.href='/alumni/cetak_alumni_pertahun/'+document.getElementById('thn_lulus').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
-                        <a href="/alumni/cetak_alumni" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                      <a href="/alumni" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
+                      <br>
+                      <br>
+                      <div class="form-group mb-3">
+                          <label>Periode Tahun</label>
+                          <select name="thn_lulus" id="thn_lulus">
+                              @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
+                                <option value="{{ $i }}">{{ $i }}</option>
+                              @endfor
+                          </select>
+                      </div>
+                      <div>
+                          <a href="#" onclick="this.href='/alumni/cetak_alumni_pertahun/'+document.getElementById('thn_lulus').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
+                          <a href="/alumni/cetak_alumni" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="card card-info card-outline">
+                <div class="card-body">
+                  <h4>Info setelah tekan tombol :</h4>
+                  <p class="card-text">Reload halaman untuk menampilkan preview dan opsi print bisa juga tekan Ctrl+p</p>
+              </div>
+          </div>
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->

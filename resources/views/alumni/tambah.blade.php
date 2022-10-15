@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nik</label>
-                            <input type="text" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}">
+                            <input type="number" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}">
  
                             @if($errors->has('nik'))
                                 <div class="text-danger">
@@ -141,7 +141,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>No Telepon</label>
-                            <input type="text" name="no_telp" class="form-control" placeholder="Masukkan No Telepon" value="{{ old('no_telp') }}">
+                            <input type="number" name="no_telp" class="form-control" placeholder="Masukkan No Telepon" value="{{ old('no_telp') }}">
  
                              @if($errors->has('no_telp'))
                                 <div class="text-danger">
@@ -182,7 +182,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Angkatan</label>
-                            <input type="text" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}">
+                            <input type="number" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}">
         
                             @if($errors->has('angkatan'))
                                 <div class="text-danger">
