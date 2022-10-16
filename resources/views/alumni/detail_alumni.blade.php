@@ -51,10 +51,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" >
                   <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/'. $alumni->foto ) ?? ''}}" alt="">
                 </div><br> -->
-                    <div class="mb-3 row">
-                        <img src="{{ asset('img/'. $alumni->foto ) }}" class="rounded mx-auto d-block" height="20%" width="30%" alt="">
-                    </div>
-                    <br>
+                        <div class="mb-3 row">
+                            <img src="{{ asset('img/'. $alumni->foto ) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
+                        </div>
+                        <br>
                             <form method="post" action="/alumni/index/{{ $alumni->nik }}">
                             {{ csrf_field() }}
                             {{ method_field('PUT') }}
@@ -214,5 +214,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 @include('Template.script')
+<style>
+.zoom {
+  /* padding: 30px; */
+  /* background-color: green; */
+  transition: transform .2s; /* Animation */
+  max-width: 100%;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+</style>
 </body>
 </html>

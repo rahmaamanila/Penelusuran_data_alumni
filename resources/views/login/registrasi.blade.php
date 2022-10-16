@@ -251,7 +251,7 @@
                                 </div>
                             </div>
 
-                          <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>Masuk Sebagai</label>
                                 <select class="form-control" name="role" value="{{ old('role') }}">
                                 <option value="alumni">Alumni</option>
@@ -262,7 +262,7 @@
                                 {{ $errors->first('role')}}
                             </div>
                             @endif
-                        </div>
+                        </div> -->
  
                         <div class="form-group">
                             <label for="foto" class="form-label">Upload Gambar</label>
