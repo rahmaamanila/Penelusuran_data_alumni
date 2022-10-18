@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nama Event</label>
-                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event" required>
+                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event">
  
                             @if($errors->has('nm_event'))
                                 <div class="text-danger">
@@ -88,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Tanggal Mulai</label>
-                            <input type="date" name="awal_event" class="form-control" placeholder="Tanggal Awal" required>
+                            <input type="date" name="awal_event" class="form-control" placeholder="Tanggal Awal">
  
                             @if($errors->has('awal_event'))
                                 <div class="text-danger">
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Tanggal Selesai</label>
-                            <input type="date" name="selesai_event" class="form-control" placeholder="Tanggal Selesai" required>
+                            <input type="date" name="selesai_event" class="form-control" placeholder="Tanggal Selesai">
  
                             @if($errors->has('selesai_event'))
                                 <div class="text-danger">
@@ -112,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="form-control" placeholder="Tambah Keterangan" required></textarea>
+                            <textarea name="keterangan" class="form-control" placeholder="Tambah Keterangan"></textarea>
  
                              @if($errors->has('keterangan'))
                                 <div class="text-danger">
@@ -125,8 +125,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                           <label for="foto" class="form-label">Upload Gambar</label>
                           <div class="input-group mb-3">
-                            <input type="file" name="foto" class="form-control" id="foto" required>
+                            <input type="file" name="foto" class="form-control" id="foto">
                           </div>
+                          @if($errors->has('foto'))
+                                <div class="text-danger">
+                                    {{ $errors->first('foto')}}
+                                </div>
+                            @endif
                         </div>
  
                         <div class="form-group">

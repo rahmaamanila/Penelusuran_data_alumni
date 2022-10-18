@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="/lowongan/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah</a>
                     <br/>
                     <br/>
-                    <table class="table table-bordered table-hover table-striped">
+                    <table class="table table-bordered table-hover table-striped" id="table-data">
                         <thead>
                             <tr class="text-center table-info">
                                 <th>Pembuat</th>

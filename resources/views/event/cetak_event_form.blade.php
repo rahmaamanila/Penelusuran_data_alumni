@@ -40,32 +40,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-header -->
 
     <!-- Main content/buat bikin sesuatu -->
-        <div class="container">
-            <div class="card mt-2">
-                <!-- <div class="card-header">
-                    Periode Tahun
-                </div> -->
-                <!-- <h3>Periode Tahun</h3> -->
-
-                  <div class="card-body">
-                    <a href="/event" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
-                    <br>
-                    <br>
-                    <div class="form-group mb-3">
-                        <label>Periode Tahun</label>
-                        <select name="tahun_event" id="tahun_event">
-                          @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                          @endfor
-                        </select>
-                    </div>
-                    <div>
-                        <a href="#" onclick="this.href='/event/cetak_event_pertanggal/'+ document.getElementById('tahun_event').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="card card-info card-outline">
+                <div class="card-body">
+                  <a href="/event" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
+                      <br>
+                      <br>
+                      <div class="input-group mb-3">
+                        <label>Tanggal Awal</label>
+                        <input type="date" name="tglawal" id="tglawal" class="form-control">
+                      </div>
+                      <div class="input-group mb-3">
+                        <label>Tanggal Akhir</label>
+                        <input type="date" name="tglakhir" id="tglakhir" class="form-control">
+                      </div>
+                      <div>
+                        <a href="#" onclick="this.href='/event/cetak_event_pertanggal/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
                         <a href="/event/cetak_event" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card card-info card-outline">
+                <div class="card-body">
+                  <h4>Keterangan :</h4>
+                  <p class="card-text">Untuk menampilkan preview dan opsi print bisa Reload halaman atau tekan Ctrl+p</p>
+              </div>
+          </div>
           <!-- /.col-md-6 -->
         </div>
         <!-- /.row -->

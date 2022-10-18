@@ -29,6 +29,17 @@ class LowonganController extends Controller
     {
         // dd($request->all());
 
+        $messages = [
+            'required' => 'Tidak boleh kosong'
+        ];
+
+    	$this->validate($request,[
+            'judul' => 'required',
+            'nik' => 'required',
+            'keterangan' => 'required',
+            'foto' => 'required'
+    	],$messages);
+
         $lowongan = Lowongan::create($request->all());
         if($request->hasFile('foto')) {
             $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
@@ -64,6 +75,16 @@ class LowonganController extends Controller
     {
         $ubah = Lowongan::where('id_lowongan',$id)->first();
         $awal = $ubah->foto;
+
+        $messages = [
+            'required' => 'Tidak boleh kosong'
+        ];
+
+    	$this->validate($request,[
+            'judul' => 'required',
+            'nik' => 'required',
+            'keterangan' => 'required'
+    	],$messages);
 
         $lowongan = [
             'judul' => $request->judul,

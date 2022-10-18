@@ -70,8 +70,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <div class="card card-info card-outline">
                 <div class="card-body">
-                  <h4>Info setelah tekan tombol :</h4>
-                  <p class="card-text">Reload halaman untuk menampilkan preview dan opsi print bisa juga tekan Ctrl+p</p>
+                  <h4>Keterangan :</h4>
+                  <p class="card-text">Untuk menampilkan preview dan opsi print bisa Reload halaman atau tekan Ctrl+p</p>
               </div>
           </div>
           <!-- /.col-md-6 -->

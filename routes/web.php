@@ -71,7 +71,7 @@ Route::group(['middleware' => ['auth:user,alumni','cekrole:admin']],function(){
     Route::get('/event/delete/{id}', 'EventController@delete');
     Route::get('/event/cetak_event', 'EventController@cetak_event');
     Route::get('/event/cetak_event_form', 'EventController@cetak_event_form');
-    Route::get('/event/cetak_event_pertanggal/{tahun_event}', 'EventController@cetak_event_pertanggal');
+    Route::get('/event/cetak_event_pertanggal/{tglawal}/{tglakhir}', 'EventController@cetak_event_pertanggal');
 
     // Route Perusahaan
     Route::get('/perusahaan', 'PerusahaanController@index')->name('perusahaan');

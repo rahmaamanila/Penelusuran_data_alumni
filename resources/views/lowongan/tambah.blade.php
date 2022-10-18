@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Judul</label>
-                            <input type="text" name="judul" class="form-control" placeholder="Judul" required>
+                            <input type="text" name="judul" class="form-control" placeholder="Judul">
  
                             @if($errors->has('judul'))
                                 <div class="text-danger">
@@ -84,8 +84,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                           <label for="foto" class="form-label">Upload Gambar</label>
                           <div class="input-group mb-3">
-                            <input type="file" name="foto" class="form-control" id="foto" required>
+                            <input type="file" name="foto" class="form-control" id="foto">
                           </div>
+
+                            @if($errors->has('foto'))
+                                <div class="text-danger">
+                                    {{ $errors->first('foto')}}
+                                </div>
+                            @endif
                         </div>
 
                         <!-- <div class="form-group">
@@ -107,7 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="form-control" placeholder="keterangan tambahan" required></textarea>
+                            <textarea name="keterangan" class="form-control" placeholder="keterangan tambahan"></textarea>
  
                              @if($errors->has('keterangan'))
                                 <div class="text-danger">

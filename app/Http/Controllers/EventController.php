@@ -37,11 +37,12 @@ class EventController extends Controller
         return view('event.cetak_event_form',compact('cetak_event_form', 'coba_data'));
     }
 
-    public function cetak_event_pertanggal($tahun_event)
+    public function cetak_event_pertanggal($tglawal, $tglakhir)
     {
         // dd(["Tanggal Awal : ".$awal_event, "Tanggal Selesai :".$selesai_event]);
-        $cetak_event_pertanggal = Event::with('alumni')->where('awal_event','LIKE', '%'. $tahun_event .'%')->get();
+        // $cetak_event_pertanggal = Event::with('alumni')->where('awal_event','LIKE', '%'. $tahun_event .'%')->get();
         // dd($cetak_event_pertanggal);
+        $cetak_event_pertanggal = Event::with('alumni')->whereBetween('awal_event', [$tglawal, $tglakhir])->get();
         return view('event.cetak_event_pertanggal', compact('cetak_event_pertanggal'));
     }
 
@@ -53,6 +54,19 @@ class EventController extends Controller
 
    public function store(Request $request)
     {
+        $messages = [
+            'required' => 'Tidak boleh kosong'
+        ];
+
+    	$this->validate($request,[
+            'nik' => 'required',
+            'nm_event' => 'required',
+            'awal_event' => 'required',
+            'selesai_event' => 'required',
+            'keterangan' => 'required',
+            'foto' => 'required'
+    	],$messages);
+
         $event = Event::create($request->all());
         if($request->hasFile('foto')) {
             $request->file('foto')->move('Gambar/', $request->file('foto')->getClientOriginalName());
@@ -81,9 +95,17 @@ class EventController extends Controller
         $ubah = Event::where('id_event',$id)->first();
         $awal = $ubah->foto;
 
-        if ($request->foto) {
-            $request->foto->move('Gambar/', $awal);
-        }
+        $messages = [
+            'required' => 'Tidak boleh kosong'
+        ];
+
+    	$this->validate($request,[
+            'nik' => 'required',
+            'nm_event' => 'required',
+            'awal_event' => 'required',
+            'selesai_event' => 'required',
+            'keterangan' => 'required',
+    	],$messages);
 
         $event = [
             'nik' => $request->nik,
@@ -93,7 +115,11 @@ class EventController extends Controller
             'keterangan' => $request->keterangan,
             'foto' => $awal
         ];
-        
+
+        if ($request->foto) {
+            $request->foto->move('Gambar/', $awal);
+        }
+
         $ubah->update($event);
 
         return redirect('/event')->with('Data diedit', 'Data berhasil diedit');
