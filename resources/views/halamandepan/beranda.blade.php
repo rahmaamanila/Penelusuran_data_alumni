@@ -45,14 +45,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-teal">
               <div class="inner">
                 <h3>{{ $jumlah_alumni }}</h3>
 
                 <p>Data Alumni</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="fas fa-solid fa-users"></i>
               </div>
               <!-- <a href="{{ route('alumni') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -60,14 +60,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{ $jumlah_lowongan }}</h3>
 
                 <p>Lowongan</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="fas fa-solid fa-briefcase"></i>
               </div>
               <!-- <a href="{{ route('lowongan') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -75,54 +75,54 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3>{{ $jumlah_event }}</h3>
 
                 <p>Event</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fas fa-regular fa-calendar"></i>
               </div>
               <!-- <a href="{{ route('event') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
-        @if (auth()->user()->role == "admin")
+          @if (auth()->user()->role == "admin")
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-teal">
               <div class="inner">
                 <h3>{{ $jumlah_perusahaan }}</h3>
 
                 <p>Perusahaan</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fas fa-regular fa-building"></i>
               </div>
               <!-- <a href="{{ route('perusahaan') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
-        @endif
-        @if (auth()->user()->role == "admin")
+          @endif
+          @if (auth()->user()->role == "admin")
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{ $jumlah_jabatan }}</h3>
 
                 <p>Jabatan</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fas fa-solid fa-layer-group"></i>
               </div>
               <!-- <a href="{{ route('jabatan') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
-        @endif
+          @endif
 
           <!-- /.col-md-6 -->
         </div>
@@ -131,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
     <div class="row">
           <div class="col-md-3">
-            <div class="card card-secondary">
+            <div class="card card-danger">
               <div class="card-header">
                 <h3 class="card-title"><i class="bi bi-telephone-fill"></i> Kontak Admin</h3>
 
@@ -177,7 +177,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <!-- PIE CHART -->
           <div class="col-md-4">
-            <div class="card card-info">
+            <div class="card card-teal">
               <div class="card-header">
                   <h3 class="card-title">Jenis Kelamin</h3>
 

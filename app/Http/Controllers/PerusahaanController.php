@@ -21,7 +21,8 @@ class PerusahaanController extends Controller
    public function store(Request $request)
     {
         $messages = [
-            'unique' => 'Nama Perusahaan sudah ada',
+            'required' => 'Tidak boleh kosong',
+            'unique' => 'Nama Perusahaan sudah ada'
         ];
 
     	$this->validate($request,[

@@ -95,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
 
                         <div class="form-group">
-                          <img src="{{ asset('img/'. $lowongan->foto ) }}" height="20%" width="30%" alt="">
+                          <img src="{{ asset('img/'. $lowongan->foto ) }}" height="10%" width="20%" alt="">
                         </div>
  
                         <div class="form-group">

@@ -22,6 +22,7 @@ class JabatanController extends Controller
     public function store(Request $request)
     {
         $messages = [
+            'required' => 'Tidak boleh kosong',
             'unique' => 'Nama Jabatan sudah ada',
         ];
 
