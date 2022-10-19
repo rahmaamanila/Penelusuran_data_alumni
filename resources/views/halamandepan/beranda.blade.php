@@ -49,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ $jumlah_alumni }}</h3>
 
-                <p>Data Alumni</p>
+                <p>Jumlah Data Alumni</p>
               </div>
               <div class="icon">
                 <i class="fas fa-solid fa-users"></i>
@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ $jumlah_lowongan }}</h3>
 
-                <p>Lowongan</p>
+                <p>Jumlah Lowongan</p>
               </div>
               <div class="icon">
                 <i class="fas fa-solid fa-briefcase"></i>
@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ $jumlah_event }}</h3>
 
-                <p>Event</p>
+                <p>Jumlah Event</p>
               </div>
               <div class="icon">
                 <i class="fas fa-regular fa-calendar"></i>
@@ -95,7 +95,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ $jumlah_perusahaan }}</h3>
 
-                <p>Perusahaan</p>
+                <p>Jumlah Perusahaan</p>
               </div>
               <div class="icon">
                 <i class="fas fa-regular fa-building"></i>
@@ -112,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="inner">
                 <h3>{{ $jumlah_jabatan }}</h3>
 
-                <p>Jabatan</p>
+                <p>Jumlah Jabatan</p>
               </div>
               <div class="icon">
                 <i class="fas fa-solid fa-layer-group"></i>
@@ -129,7 +129,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <div class="row">
+    <div class="row col-12">
           <div class="col-md-3">
             <div class="card card-danger">
               <div class="card-header">
@@ -177,7 +177,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <!-- PIE CHART -->
           <div class="col-md-4">
-            <div class="card card-teal">
+            <div class="card card-info">
               <div class="card-header">
                   <h3 class="card-title">Jenis Kelamin</h3>
 
