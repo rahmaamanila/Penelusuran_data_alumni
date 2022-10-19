@@ -45,12 +45,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card-body">
                     <br/>
                         
-                            <form method="post" action="/alumni/index/{{ $alumni->nik }}" enctype="multipart/form-data">
+                            <!-- <form method="post" action="/alumni/index/{{ $alumni->nik }}" enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            {{ method_field('PUT') }}
+                            {{ method_field('PUT') }} -->
                             
                                 <div class="mb-3 row">
-                                    <img src="{{ asset('img/'. $alumni->foto ) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
+                                    <img src="{{ asset($alumni->foto == null ? 'img/poto.png' : 'img/'.$alumni->foto) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
                                 </div>
                                 
                                 <div class="row text-center">

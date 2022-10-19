@@ -51,13 +51,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <img class="profile-user-img img-fluid img-circle" src="{{asset('Gambar/poto.png')}}" alt="user foto" >
                   <img class="profile-user-img img-fluid img-circle" src="{{ asset('img/'. $alumni->foto ) ?? ''}}" alt="">
                 </div><br> -->
-                        <div class="mb-3 row">
-                            <img src="{{ asset('img/'. $alumni->foto ) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
-                        </div>
-                        <br>
-                            <form method="post" action="/alumni/index/{{ $alumni->nik }}">
+                        
+                            <!-- <form method="post" action="/alumni/index/{{ $alumni->nik }}">
                             {{ csrf_field() }}
-                            {{ method_field('PUT') }}
+                            {{ method_field('PUT') }} -->
+
+                                <div class="mb-3 row">
+                                    <img src="{{ asset($alumni->foto == null ? 'img/poto.png' : 'img/'.$alumni->foto) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
+                                </div>  
 
                                 <div class="row text-center">
                                     <div class="col-md">

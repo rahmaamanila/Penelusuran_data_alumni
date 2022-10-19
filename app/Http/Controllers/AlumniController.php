@@ -204,6 +204,7 @@ class AlumniController extends Controller
                 $request->file('foto')->move('img/', $request->file('foto')->getClientOriginalName());
                 // dd($request->file('foto')->getClientOriginalName());
                 $alumni2 = array('foto' => $request->file('foto')->getClientOriginalName());
+                // dd($alumni2);
                 // dd(array_merge($alumni, $alumni2)); 
                 $createAlumni = Alumni::create(array_merge($alumni, $alumni2));
                 $createAlumni->save();
@@ -238,13 +239,15 @@ class AlumniController extends Controller
     public function detail($id)
     {
         $alumni = Alumni::where('nik',$id)->first();
-        return view('alumni.detail', compact('alumni'));
+        $defaultFoto = $alumni->foto ?? 'poto.png';
+        return view('alumni.detail', compact('alumni','defaultFoto'));
     }
 
     public function detail_alumni($id)
     {
         $alumni = Alumni::where('nik',$id)->first();
-        return view('alumni.detail_alumni', compact('alumni'));
+        $defaultFoto = $alumni->foto ?? 'poto.png';
+        return view('alumni.detail_alumni', compact('alumni','defaultFoto'));
     }
 
     public function edit($id)
