@@ -37,8 +37,31 @@ class JabatanController extends Controller
         return redirect('/jabatan')->with('Data ditambah', 'Data berhasil ditambah');
     }
     
+    public function edit($id)
+    {
+        $jabatan = Jabatan::where('id_jabatan', $id)->first();
+        return view('jabatan.edit', compact('jabatan'));
+    }
     
-        public function delete($id)
+    public function update($id, Request $request)
+    {
+        $messages = [
+            'required' => 'Tidak boleh kosong',
+            'unique' => 'Nama Jabatan sudah ada',
+        ];
+
+    	$this ->validate($request,[
+    		'nm_jabatan' => 'required|string|unique:jabatan,nm_jabatan',
+    	],$messages);
+
+        Jabatan::where('id_jabatan', $id)->update([
+            'nm_jabatan' => $request->nm_jabatan
+    	]);
+
+        return redirect('/jabatan')->with('Data diedit', 'Data berhasil diedit');
+    }
+
+    public function delete($id)
     {
         Jabatan::where('id_jabatan',$id)->delete();
 

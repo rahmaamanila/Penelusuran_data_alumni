@@ -47,6 +47,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
         @endif
 
+        @if(session('Data diedit'))
+        <div class="alert alert-success" role="alert">
+          {{session('Data diedit')}}
+        </div>
+        @endif
+
         @if(session('Data ditambah'))
         <div class="alert alert-success" role="alert">
           {{session('Data ditambah')}}
@@ -75,6 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $i+1 }}</td>
                                 <td>{{ $p->nm_jabatan }}</td>
                                 <td>
+                                  <a href="/jabatan/edit/{{ $p->id_jabatan }}" class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i></a>
                                   <a href="/jabatan/delete/{{ $p->id_jabatan }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')"><i class="bi bi-trash-fill"></i></a>
                                   <!-- <a href="#" class="btn btn-danger btn-sm delete" data-id="{{ $p->id_jabatan }}" data-nama="{{ $p->nm_jabatan }}"><i class="bi bi-trash-fill"></i></a> -->
                                 </td>

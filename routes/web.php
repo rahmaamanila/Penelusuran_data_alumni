@@ -77,12 +77,16 @@ Route::group(['middleware' => ['auth:user,alumni','cekrole:admin']],function(){
     Route::get('/perusahaan', 'PerusahaanController@index')->name('perusahaan');
     Route::get('/perusahaan/tambah', 'PerusahaanController@tambah');
     Route::post('/perusahaan/store', 'PerusahaanController@store');
+    Route::get('/perusahaan/edit/{id}', 'PerusahaanController@edit');
+    Route::put('/perusahaan/update/{id}', 'PerusahaanController@update');
     Route::get('/perusahaan/delete/{id}', 'PerusahaanController@delete');
 
     // Route Jabatan
     Route::get('/jabatan', 'JabatanController@index')->name('jabatan');
     Route::get('/jabatan/tambah', 'JabatanController@tambah');
     Route::post('/jabatan/store', 'JabatanController@store');
+    Route::get('/jabatan/edit/{id}', 'JabatanController@edit');
+    Route::put('/jabatan/update/{id}', 'JabatanController@update');
     Route::get('/jabatan/delete/{id}', 'JabatanController@delete');
 });
 

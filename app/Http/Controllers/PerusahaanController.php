@@ -36,6 +36,30 @@ class PerusahaanController extends Controller
     	return redirect('/perusahaan')->with('Data ditambah', 'Data berhasil ditambah');
     }
 
+    public function edit($id)
+    {
+        $perusahaan = Perusahaan::where('id_perusahaan',$id)->first();
+        return view('perusahaan.edit', compact('perusahaan'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $messages = [
+            'required' => 'Tidak boleh kosong',
+            'unique' => 'Nama Perusahaan sudah ada'
+        ];
+
+    	$this->validate($request,[
+            'nm_perusahaan' => 'required|string|unique:perusahaan,nm_perusahaan'
+    	],$messages);
+ 
+        Perusahaan::where('id_perusahaan', $id)->update([
+            'nm_perusahaan' => $request->nm_perusahaan
+    	]);
+ 
+    	return redirect('/perusahaan')->with('Data diedit', 'Data berhasil diedit');
+    }
+
     public function delete($id)
     {
         Perusahaan::where('id_perusahaan',$id)->delete();
