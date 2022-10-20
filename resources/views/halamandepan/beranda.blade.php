@@ -115,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <p>Jumlah Jabatan</p>
               </div>
               <div class="icon">
-                <i class="fas fa-solid fa-layer-group"></i>
+                <i class="fas bi-person-plus-fill"></i>
               </div>
               <!-- <a href="{{ route('jabatan') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
