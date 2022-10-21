@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 
                 <div class="card-body">
                     <a href="/alumni/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah Data</a>
-                    <a href="/alumni/cetak_alumni_form" class="btn btn-default"><i class="fas fa-print"></i></a>
+                    <a href="/alumni/cetak_alumni_form" class="btn btn-default" data-toggle="tooltip" title="Cetak"><i class="fas fa-print"></i></a>
                     <br/>
                     <br>
 
@@ -101,9 +101,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $p->angkatan }}</td>
                                 <td>{{ $p->status }}</td>
                                 <td>
-                                    <a href="/alumni/editt/{{ $p->nik }}" class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href="/alumni/detail/{{ $p->nik }}" class="btn btn-warning btn-sm"><i class="bi bi-eye-fill"></i></a>
-                                    <a href="/alumni/delete/{{ $p->nik }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')"><i class="bi bi-trash-fill"></i></a>                                    
+                                    <a href="/alumni/editt/{{ $p->nik }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="Edit"><i class="bi bi-pencil-fill"></i></a>
+                                    <a href="/alumni/detail/{{ $p->nik }}" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Detail"><i class="bi bi-eye-fill"></i></a>
+                                    <a href="/alumni/delete/{{ $p->nik }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')" data-toggle="tooltip" title="Hapus"><i class="bi bi-trash-fill"></i></a>                                    
                                 </td>
                             </tr>
                             @endforeach

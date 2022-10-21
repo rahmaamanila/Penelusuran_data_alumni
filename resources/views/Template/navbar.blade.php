@@ -51,7 +51,7 @@
                 <i class="nav-icon fas bi-box-arrow-right"></i>  Logout
               </a>
               <li class="nav-item">
-                <a class="nav-link" data-widget="fullscreen" role="button">
+                <a class="nav-link" data-widget="fullscreen" role="button" data-toggle="tooltip" title="Layar Penuh">
                   <i class="fas fa-expand-arrows-alt"></i>
                 </a>
               </li>

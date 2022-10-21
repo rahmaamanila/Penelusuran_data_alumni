@@ -74,7 +74,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $p->thn_lulus }}</td>
                                 <td>{{ $p->angkatan }}</td>
                                 <td>
-                                    <a href="/alumni/detail_alumni/{{ $p->nik }}" class="btn btn-warning btn-sm"><i class="bi bi-eye-fill"></i></a>
+                                    <a href="/alumni/detail_alumni/{{ $p->nik }}" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Detail"><i class="bi bi-eye-fill"></i></a>
                                 </td>
                             </tr>
                             @endforeach

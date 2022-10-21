@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $p->keterangan }}</td>
                                 <td class="text-center">
                                     <!-- <a href="/lowongan/edit/{{ $p->id_lowongan }}" class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i></a> -->
-                                    <a href="/lowongan/detail/{{ $p->id_lowongan }}" class="btn btn-warning btn-sm"><i class="bi bi-eye-fill"></i></a>
+                                    <a href="/lowongan/detail/{{ $p->id_lowongan }}" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Detail"><i class="bi bi-eye-fill"></i></a>
                                 </td>
                                 </td>
                             </tr>

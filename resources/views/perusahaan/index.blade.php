@@ -81,8 +81,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <td>{{ $i+1 }}</td>
                                 <td>{{ $p->nm_perusahaan }}</td>
                                 <td>
-                                  <a href="/perusahaan/edit/{{ $p->id_perusahaan }}" class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i></a>
-                                  <a href="/perusahaan/delete/{{ $p->id_perusahaan }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')"><i class="bi bi-trash-fill"></i></a>
+                                  <a href="/perusahaan/edit/{{ $p->id_perusahaan }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="Edit"><i class="bi bi-pencil-fill"></i></a>
+                                  <a href="/perusahaan/delete/{{ $p->id_perusahaan }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')" data-toggle="tooltip" title="Hapus"><i class="bi bi-trash-fill"></i></a>
                                   <!-- <a href="#" class="btn btn-danger btn-sm delete" data-id="{{ $p->id_perusahaan }}" data-nama="{{ $p->nm_perusahaan }}"><i class="bi bi-trash-fill"></i></a> -->
                                 </td>
                             </tr>

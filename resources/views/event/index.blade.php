@@ -65,7 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <br> -->
                 <div class="card-body">
                     <a href="/event/tambah" class="btn btn-info"><i class="bi bi-plus"></i>Tambah</a>
-                    <a href="/event/cetak_event_form" class="btn btn-default"><i class="fas fa-print"></i></a>
+                    <a href="/event/cetak_event_form" class="btn btn-default" data-toggle="tooltip" title="Cetak"><i class="fas fa-print"></i></a>
                     <br/>
                     <br/>
                     <table class="table table-bordered table-hover table-striped" id="table-data">
@@ -95,9 +95,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </td>
                                 <td>{{ $p->keterangan }}</td>
                                 <td>
-                                    <a href="/event/edit/{{ $p->id_event }}" class="btn btn-success btn-sm"><i class="bi bi-pencil-fill"></i></a>
+                                    <a href="/event/edit/{{ $p->id_event }}" class="btn btn-success btn-sm" data-toggle="tooltip" title="Edit"><i class="bi bi-pencil-fill"></i></a>
                                     <!-- <a href="/event/detail/{{ $p->id_event }}" class="btn btn-warning btn-sm"><i class="bi bi-eye-fill"></i></a> -->
-                                    <a href="/event/delete/{{ $p->id_event }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')"><i class="bi bi-trash-fill"></i></a>
+                                    <a href="/event/delete/{{ $p->id_event }}" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin dihapus?')" data-toggle="tooltip" title="Hapus"><i class="bi bi-trash-fill"></i></a>
                                 </td>
                             </tr>
                             @endforeach
