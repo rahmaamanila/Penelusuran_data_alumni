@@ -60,7 +60,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('alumni') }}" class="nav-link {{ e($__env->yieldContent('submenu')) == 'alumni1' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-success"></i>
                   <p>Data Alumni</p>
                 </a>
               </li>
@@ -71,7 +71,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/alumni/index_alumni" class="nav-link {{ e($__env->yieldContent('submenu')) == 'alumni2' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-success"></i>
                   <p>Data Alumni</p>
                 </a>
               </li>
@@ -82,7 +82,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('lowongan') }}" class="nav-link {{ e($__env->yieldContent('submenu')) == 'lowongan' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-warning"></i>
                   <p>Lowongan</p>
                 </a>
               </li>
@@ -93,7 +93,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/lowongan/index_alumni" class="nav-link {{ e($__env->yieldContent('submenu')) == 'low' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-warning"></i>
                   <p>Lowongan</p>
                 </a>
               </li>
@@ -104,7 +104,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('event') }}" class="nav-link {{ e($__env->yieldContent('submenu')) == 'event' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-danger"></i>
                   <p>Event</p>
                 </a>
               </li>
@@ -115,7 +115,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/event/index_alumni" class="nav-link {{ e($__env->yieldContent('submenu')) == 'ev' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-danger"></i>
                   <p>Event</p>
                 </a>
               </li>
@@ -126,7 +126,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('perusahaan') }}" class="nav-link {{ e($__env->yieldContent('submenu')) == 'perusahaan' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-success"></i>
                   <p>Perusahaan</p>
                 </a>
               </li>
@@ -137,7 +137,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('jabatan') }}" class="nav-link {{ e($__env->yieldContent('submenu')) == 'jabatan' ? 'active' : '' }}">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="far fa-circle nav-icon text-warning"></i>
                   <p>Jabatan</p>
                 </a>
               </li>
