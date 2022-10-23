@@ -61,7 +61,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @foreach($index_alumni as $p)
                             <tr>
                                 <td width="50%" class="text-center">
-                                  <img src="{{ asset('img/'. $p->foto ) }}" height="20%" width="30%" alt="">
+                                  <img src="{{ asset('img/'. $p->foto ) }}" height="10%" width="20%" alt="">
                                   <!-- <a href="{{ asset('img/'. $p->foto ) }}" target="_blank" rel="noopener noreferrer">lihat gambar</a> -->
                                 </td>
                                 <td>{{ $p->keterangan }}</td>

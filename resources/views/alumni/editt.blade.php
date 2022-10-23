@@ -51,29 +51,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
  
-                        <div class="form-group">
-                            <label>Nik</label>
-                            <input type="text" name="nik" class="form-control" value="{{ $alumni->nik }}" disabled>
- 
-                            @if($errors->has('nik'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nik')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>NIK</label>
+                                    <input type="text" name="nik" class="form-control" value="{{ $alumni->nik }}" disabled>
+        
+                                    @if($errors->has('nik'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('nik')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
-                        </div>
-
-                        <div class="form-group">
-                            <label>Nama</label>
-                            <input type="text" name="nama" class="form-control" placeholder="nama alumni .." value="{{ $alumni->nama }}">
- 
-                            @if($errors->has('nama'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nama')}}
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Nama</label>
+                                    <input type="text" name="nama" class="form-control" placeholder="nama alumni .." value="{{ $alumni->nama }}">
+        
+                                    @if($errors->has('nama'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('nama')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
+                            </div>
                         </div>
+                        <br>
 
                         <div class="row">
                             <div class="col-md">
@@ -104,34 +109,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <br>
 
-                        <!-- <div class="row">
-                            <div class="col-md">
-                                <div class="form-floating">
-                                <label for="tmpt_lahir">Tempat Lahir</label>
-                                <input type="text" class="form-control" name="tmpt_lahir" id="tmpt_lahir" value="{{ $alumni->tmpt_lahir }}">
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="form-floating">
-                                <label for="tgl_lahir">Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="tgl_lahir" id="datePickerId" value="{{ $alumni->tgl_lahir }}">
-                                </div>
-                            </div>
-
-                            @if($errors->has('tmpt_lahir'))
-                                <div class="text-danger">
-                                    {{ $errors->first('tmpt_lahir')}}
-                                </div>
-                            @endif
-
-                            @if($errors->has('tgl_lahir'))
-                                <div class="text-danger">
-                                    {{ $errors->first('tgl_lahir')}}
-                                </div>
-                            @endif
-                        </div>
-                        <br> -->
-
                         <div class="form-group">
                             <label for="jenkel">Jenis Kelamin</label> <br>
                             @if($alumni->jenkel == "laki-laki")
@@ -147,36 +124,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @endif
                         </div>
 
-                        <div class="form-group">
-                            <label>Agama</label>
-                                <select class="form-control" name="agama" value="{{ $alumni->agama }}">
-                                <option selected>Pilih agama</option>
-                                <option value="islam" @if($alumni->agama == 'islam') selected @endif>Islam</option>
-                                <option value="kristen"  @if($alumni->agama == 'kristen') selected @endif>Kristen</option>
-                                <option value="katholik"  @if($alumni->agama == 'katholik') selected @endif>Katholik</option>
-                                <option value="buddha"  @if($alumni->agama == 'buddha') selected @endif>Buddha</option>
-                                <option value="konghucu"  @if($alumni->agama == 'konghucu') selected @endif>Konghucu</option>		
-                                </select>
- 
-                             @if($errors->has('agama'))
-                                <div class="text-danger">
-                                    {{ $errors->first('agama')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Agama</label>
+                                    <select class="form-control" name="agama" value="{{ $alumni->agama }}">
+                                        <option selected>Pilih agama</option>
+                                        <option value="islam" @if($alumni->agama == 'islam') selected @endif>Islam</option>
+                                        <option value="kristen"  @if($alumni->agama == 'kristen') selected @endif>Kristen</option>
+                                        <option value="katholik"  @if($alumni->agama == 'katholik') selected @endif>Katholik</option>
+                                        <option value="buddha"  @if($alumni->agama == 'buddha') selected @endif>Buddha</option>
+                                        <option value="konghucu"  @if($alumni->agama == 'konghucu') selected @endif>Konghucu</option>		
+                                    </select>
+        
+                                    @if($errors->has('agama'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('agama')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
-                        </div>
-
-                        <div class="form-group">
-                            <label>No Telepon</label>
-                            <input type="number" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}">
- 
-                            @if($errors->has('no_telp'))
-                                <div class="text-danger">
-                                    {{ $errors->first('no_telp')}}
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>No Telepon</label>
+                                    <input type="number" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}">
+        
+                                    @if($errors->has('no_telp'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('no_telp')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
+                            </div>
                         </div>
+                        <br>
  
                         <div class="form-group">
                             <label>Alamat</label>
@@ -190,36 +172,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         </div>
 
-                        <div class="form-group">
-                            <label>Tahun Lulus</label>
-                                <select name="thn_lulus" id="thn_lulus" class="form-control">
-                                    @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
-                                        @if($i == $alumni->thn_lulus)
-                                            <option value="{{ $i }}" selected>{{ $alumni->thn_lulus }}</option>
-                                        @elseif($i !== $alumni->thn_lulus)
-                                            <option value="{{ $i }}">{{ $i }}</option>
-                                        @endif 
-                                    @endfor                    
-                                </select>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Tahun Lulus</label>
+                                    <select name="thn_lulus" id="thn_lulus" class="form-control">
+                                        @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
+                                            @if($i == $alumni->thn_lulus)
+                                                <option value="{{ $i }}" selected>{{ $alumni->thn_lulus }}</option>
+                                            @elseif($i !== $alumni->thn_lulus)
+                                                <option value="{{ $i }}">{{ $i }}</option>
+                                            @endif 
+                                        @endfor                    
+                                    </select>
 
-                                @if($errors->has('thn_lulus'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('thn_lulus')}}
-                                    </div>
-                                @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label>Angkatan</label>
-                            <input type="number" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}">
- 
-                            @if($errors->has('angkatan'))
-                                <div class="text-danger">
-                                    {{ $errors->first('angkatan')}}
+                                    @if($errors->has('thn_lulus'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('thn_lulus')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Angkatan</label>
+                                    <input type="number" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}">
+        
+                                    @if($errors->has('angkatan'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('angkatan')}}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
+                        <br>
 
                         <div class="row">
                             <div class="col-md">
@@ -250,46 +238,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <br>
 
-                        <!-- <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="email" class="form-control" value="{{ $alumni->email }}">
- 
-                             @if($errors->has('email'))
-                                <div class="text-danger">
-                                    {{ $errors->first('email')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label for="foto" class="form-label">Ubah Gambar</label>
+                                    <div class="input-group mb-3">
+                                        <input type="file" name="foto" value="{{ $alumni->foto }}" class="form-control" id="foto">
+                                    </div>
                                 </div>
-                            @endif
- 
+                            </div>
+
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Status</label>
+                                    <select class="form-control" name="status">
+                                        <option value="bekerja" @if($alumni->status == 'bekerja') selected @endif>Bekerja</option>
+                                        <option value="belumbekerja" @if($alumni->status == 'belumbekerja') selected @endif>Belum Bekerja</option>		
+                                    </select>
+        
+                                    @if($errors->has('status'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('status')}}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
+                        <br>
 
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control" value="{{ $alumni->password }}">
- 
-                            @if($errors->has('password'))
-                                <div class="text-danger">
-                                    {{ $errors->first('password')}}
-                                </div>
-                            @endif
- 
-                        </div> -->
-
-                        <div class="form-group">
-                            <label>Status</label>
-                                <select class="form-control" name="status">
-                                <option value="bekerja" @if($alumni->status == 'bekerja') selected @endif>Bekerja</option>
-                                <option value="belumbekerja" @if($alumni->status == 'belumbekerja') selected @endif>Belum Bekerja</option>		
-                                </select>
- 
-                             @if($errors->has('status'))
-                                <div class="text-danger">
-                                    {{ $errors->first('status')}}
-                                </div>
-                            @endif
- 
-                        </div>
-
-                        <div class="class-perusahaan">
+                            <div class="class-perusahaan">
                                 <div class="row">
                                     <div class="col-md">
                                         <div class="form-floating">
@@ -349,72 +326,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                                 <br>
-
-                            <!-- <div class="form-group">
-                                <label>Perusahaan</label>
-                                    <select class="form-control" name="id_perusahaan" id="id_perusahaan">
-                                        <option value="">pilih perusahaan</option>
-                                        @foreach($perusahaan as $item)
-                                            @if($item->id_perusahaan==$alumni->id_perusahaan)
-                                            <option value={{ $item->id_perusahaan }} selected>{{ $item->nm_perusahaan }}</option>
-                                            @else
-                                            <option value={{ $item->id_perusahaan }}>{{ $item->nm_perusahaan }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-    
-                                @if($errors->has('id_perusahaan'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('id_perusahaan')}}
-                                    </div>
-                                @endif
- 
-                            </div> -->
-
-                            <!-- <div class="form-group">
-                                <label>Jabatan</label>
-                                    <select class="form-control" name="id_jabatan" id="id_jabatan">
-                                        <option value="">pilih perusahaan</option>
-                                        @foreach($jabatan as $item)
-                                            @if($item->id_jabatan==$alumni->id_jabatan)
-                                            <option value={{ $item->id_jabatan }} selected>{{ $item->nm_jabatan }}</option>
-                                            @else
-                                            <option value={{ $item->id_jabatan }}>{{ $item->nm_jabatan }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-    
-                                @if($errors->has('id_jabatan'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('id_jabatan')}}
-                                    </div>
-                                @endif
- 
-                            </div> -->
-
-                            <!-- <div class="form-group">
-                                <label>Tanggal Masuk Kerja</label>
-                                <input type="date" name="tgl_masuk" class="form-control" value="{{ $alumni->tgl_masuk }}">
-    
-                                @if($errors->has('tgl_masuk'))
-                                    <div class="text-danger">
-                                        {{ $errors->first('tgl_masuk')}}
-                                    </div>
-                                @endif
-    
-                            </div> -->
-                        </div>
-
-                        <div class="form-group">
-                          <label for="foto" class="form-label">Ubah Gambar</label>
-                          <div class="input-group mb-3">
-                            <input type="file" name="foto" value="{{ $alumni->foto }}" class="form-control" id="foto">
-                          </div>
-                        </div>
-
-                        <!-- <div class="form-group">
-                          <img src="{{ asset('img/'. $alumni->foto ) }}" height="20%" width="30%" alt="">
-                        </div> -->
+                            </div>
  
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Edit" onclick="return confirm('Yakin ingin mengedit data?')">

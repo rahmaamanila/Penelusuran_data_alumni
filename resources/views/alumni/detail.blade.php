@@ -44,11 +44,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="card mt-2">
             <div class="card-body">
                     <br/>
-                        
-                            <!-- <form method="post" action="/alumni/index/{{ $alumni->nik }}" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('PUT') }} -->
-                            
                                 <div class="mb-3 row">
                                     <img src="{{ asset($alumni->foto == null ? 'img/poto.png' : 'img/'.$alumni->foto) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
                                 </div>
@@ -202,9 +197,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                                 <br>
-                                <div class="col-sm-10 d-grid gap-2 col-6 mx-auto">
-                                <!-- <a href="{{ session('alumni')->role === 'alumni' ? URL::to('alumni/index_alumni') : URL::to('alumni') }}" class="btn btn-primary">Kembali</a> -->
-                                <a href="/alumni" class="btn btn-primary btn-block">Kembali</a>
+
+                                <div class="col-md">
+                                    <!-- <a href="{{ session('alumni')->role === 'alumni' ? URL::to('alumni/index_alumni') : URL::to('alumni') }}" class="btn btn-primary">Kembali</a> -->
+                                    <a href="/alumni" class="btn btn-primary btn-block">Kembali</a>
                                 </div>
                             </div>
                         </div>

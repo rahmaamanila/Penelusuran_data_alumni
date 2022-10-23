@@ -72,21 +72,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tahun Lulus</label>
+                                            <label for="nama" class="col-sm-6 col-form-label">Nama</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->thn_lulus }}
+                                                <b>:</b> {{ $alumni->nama }}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <br>
                                 
+                                <div class="row text-center">
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="jenkel" class="col-sm-6 col-form-label">Jenis Kelamin</label>
+                                            <div class="col-sm-12">
+                                                <b>:</b> {{ $alumni->jenkel }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="agama" class="col-sm-6 col-form-label">Agama</label>
+                                            <div class="col-sm-12">
+                                                <b>:</b> {{ $alumni->agama }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
 
                                 <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                        <label for="nama" class="col-sm-6 col-form-label">Nama</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tahun Lulus</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->nama }}
+                                                <b>:</b> {{ $alumni->thn_lulus }}
                                             </div>
                                         </div>
                                     </div>
@@ -105,48 +126,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row text-center">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="jenkel" class="col-sm-6 col-form-label">Jenis Kelamin</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->jenkel }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="status" class="col-sm-6 col-form-label">Status</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->status }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="row text-center">
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="agama" class="col-sm-6 col-form-label">Agama</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->agama }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="id_perusahaan" class="col-sm-6 col-form-label">Perusahaan</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ !empty($alumni->id_perusahaan) ? $alumni->perusahaan->nm_perusahaan : '-'  }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="row text-center">
-                                    <div class="col-md">
-                                        <div class="form-floating">
                                             <label for="alamat" class="col-sm-6 col-form-label">Alamat</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->alamat }}
@@ -156,9 +135,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="id_jabatan" class="col-sm-6 col-form-label">Jabatan</label>
+                                            <label for="status" class="col-sm-6 col-form-label">Status</label>
+                                            <div class="col-sm-12">
+                                                <b>:</b> {{ $alumni->status }}
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row text-center">
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="id_perusahaan" class="col-sm-12 col-form-label">Perusahaan</label>
+                                            <div class="col-sm-12">
+                                                <b>:</b> {{ !empty($alumni->id_perusahaan) ? $alumni->perusahaan->nm_perusahaan : '-'  }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="id_jabatan" class="col-sm-12 col-form-label">Jabatan</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ !empty($alumni->id_jabatan) ? $alumni->jabatan->nm_jabatan : '-'  }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="tgl_masuk" class="col-sm-12 col-form-label">Tanggal Masuk Kerja</label>
+                                            <div class="col-sm-12">
+                                                <b>:</b> {{ $alumni->tgl_masuk ?? '-' }}
                                             </div>
                                         </div>
                                     </div>
@@ -169,15 +177,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <div class="col-sm-12">
-                                                <a href="/alumni/index_alumni" class="btn btn-primary">Kembali</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="tgl_masuk" class="col-sm-6 col-form-label">Tanggal Masuk Kerja</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->tgl_masuk ?? '-' }}
+                                                <a href="/alumni/index_alumni" class="btn btn-primary btn-block">Kembali</a>
                                             </div>
                                         </div>
                                     </div>

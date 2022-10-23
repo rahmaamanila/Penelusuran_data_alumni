@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Judul</label>
-                            <input type="text" name="judul" class="form-control" placeholder="Judul">
+                            <input type="text" name="judul" class="form-control" placeholder="Judul" value="{{ old('judul') }}">
  
                             @if($errors->has('judul'))
                                 <div class="text-danger">
@@ -113,7 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="form-control" placeholder="keterangan tambahan"></textarea>
+                            <textarea name="keterangan" class="form-control" placeholder="keterangan tambahan">{{ old('keterangan') }}</textarea>
  
                              @if($errors->has('keterangan'))
                                 <div class="text-danger">

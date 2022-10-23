@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nama Event</label>
-                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event">
+                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event" value="{{ old('nm_event') }}">
  
                             @if($errors->has('nm_event'))
                                 <div class="text-danger">
@@ -88,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Tanggal Mulai</label>
-                            <input type="date" name="awal_event" class="form-control" placeholder="Tanggal Awal">
+                            <input type="date" name="awal_event" class="form-control" placeholder="Tanggal Awal" value="{{ old('awal_event') }}">
  
                             @if($errors->has('awal_event'))
                                 <div class="text-danger">
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Tanggal Selesai</label>
-                            <input type="date" name="selesai_event" class="form-control" placeholder="Tanggal Selesai">
+                            <input type="date" name="selesai_event" class="form-control" placeholder="Tanggal Selesai" value="{{ old('selesai_event') }}">
  
                             @if($errors->has('selesai_event'))
                                 <div class="text-danger">
@@ -112,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         <div class="form-group">
                             <label>Keterangan</label>
-                            <textarea name="keterangan" class="form-control" placeholder="Tambah Keterangan"></textarea>
+                            <textarea name="keterangan" class="form-control" placeholder="Tambah Keterangan">{{ old('keterangan') }}</textarea>
  
                              @if($errors->has('keterangan'))
                                 <div class="text-danger">

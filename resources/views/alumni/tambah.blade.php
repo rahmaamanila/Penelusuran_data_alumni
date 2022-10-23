@@ -43,37 +43,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content/buat bikin sesuatu -->
     <div class="container">
             <div class="card mt-2">
-                <!-- <div class="card-header text-center">
-                    Tambah alumni 
-                </div> -->
                 <div class="card-body">
                     <form method="post" action="/alumni/store" enctype="multipart/form-data">
  
                         {{ csrf_field() }}
- 
-                        <div class="form-group">
-                            <label>Nik</label>
-                            <input type="number" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}">
- 
-                            @if($errors->has('nik'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nik')}}
-                                </div>
-                            @endif
- 
-                        </div>
 
-                        <div class="form-group">
-                            <label>Nama</label>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" value="{{ old('nama') }}">
- 
-                             @if($errors->has('nama'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nama')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>NIK</label>
+                                    <input type="number" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}">
+        
+                                    @if($errors->has('nik'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('nik')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Nama</label>
+                                    <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" value="{{ old('nama') }}">
+        
+                                    @if($errors->has('nama'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('nama')}}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
+                        <br>
 
                         <div class="row">
                             <div class="col-md">
@@ -107,10 +109,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                             <label>Jenis Kelamin</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jenkel" id="jenkel" value="laki-laki" checked> Laki-laki
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="jenkel" id="jenkel" value="perempuan"> Perempuan
+                                <input  type="radio" name="jenkel" id="jenkel" value="laki-laki" checked> Laki-laki
+                                <input  type="radio" name="jenkel" id="jenkel" value="perempuan"> Perempuan
                             </div>
                             
                             @if($errors->has('jenkel'))
@@ -120,37 +120,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @endif
                         </div>
 
-                        <div class="form-group">
-                            <label>Agama</label>
-                                <select class="form-control" name="agama" value="{{ old('agama') }}">
-                                <option value="">Pilih agama</option>
-                                <option value="islam">Islam</option>
-                                <option value="kristen">Kristen</option>
-                                <option value="katholik">Katholik</option>
-                                <option value="buddha">Buddha</option>
-                                <option value="onghucu">Konghucu</option>		
-                                </select>
- 
-                             @if($errors->has('agama'))
-                                <div class="text-danger">
-                                    {{ $errors->first('agama')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Agama</label>
+                                        <select class="form-control" name="agama" value="{{ old('agama') }}">
+                                            <option value="">Pilih agama</option>
+                                            <option value="islam">Islam</option>
+                                            <option value="kristen">Kristen</option>
+                                            <option value="katholik">Katholik</option>
+                                            <option value="buddha">Buddha</option>
+                                            <option value="onghucu">Konghucu</option>		
+                                        </select>
+        
+                                    @if($errors->has('agama'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('agama')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
-                        </div>
-
-                        <div class="form-group">
-                            <label>No Telepon</label>
-                            <input type="number" name="no_telp" class="form-control" placeholder="Masukkan No Telepon" value="{{ old('no_telp') }}">
- 
-                             @if($errors->has('no_telp'))
-                                <div class="text-danger">
-                                    {{ $errors->first('no_telp')}}
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>No Telepon</label>
+                                    <input type="number" name="no_telp" class="form-control" placeholder="Masukkan No Telepon" value="{{ old('no_telp') }}">
+        
+                                    @if($errors->has('no_telp'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('no_telp')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
- 
+                            </div>
                         </div>
-
+                        <br>
 
                         <div class="form-group">
                             <label>Alamat</label>
@@ -164,32 +168,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         </div>
 
-                        <div class="form-group">
-                            <label>Tahun Lulus</label>
-                            <!-- <input type="number" name="thn_lulus" class="form-control" placeholder="Masukkan Tahun" value="{{ old('thn_lulus') }}"> -->
-                            <select name="thn_lulus" id="thn_lulus" class="form-control" value="{{ old('thn_lulus') }}">
-                                @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
-                                    <option value="{{ $i }}">{{ $i }}</option>
-                                @endfor
-                            </select>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Tahun Lulus</label>
+                                    <select name="thn_lulus" id="thn_lulus" class="form-control" value="{{ old('thn_lulus') }}">
+                                        @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
+                                    </select>
 
-                            @if($errors->has('thn_lulus'))
-                                <div class="text-danger">
-                                    {{ $errors->first('thn_lulus')}}
+                                    @if($errors->has('thn_lulus'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('thn_lulus')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label>Angkatan</label>
-                            <input type="number" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}">
-        
-                            @if($errors->has('angkatan'))
-                                <div class="text-danger">
-                                    {{ $errors->first('angkatan')}}
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Angkatan</label>
+                                    <input type="number" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}">
+                
+                                    @if($errors->has('angkatan'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('angkatan')}}
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
+                            </div>
                         </div>
+                        <br>
 
                         <div class="row">
                             <div class="col-md">
@@ -216,45 +226,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <br>
 
-                        <!-- <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Masukkan Email" value="{{ old('email') }}">
- 
-                             @if($errors->has('email'))
-                                <div class="text-danger">
-                                    {{ $errors->first('email')}}
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating">
+                                <label for="foto" class="form-label">Upload Gambar</label>
+                                    <div class="input-group mb-3">
+                                        <input type="file" name="foto" class="form-control" id="foto">
+                                    </div>
                                 </div>
-                            @endif
- 
+                            </div>
+                            
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <label>Status</label>
+                                    <select class="form-control" name="status">
+                                        <option value="">Pilih Status</option>
+                                        <option value="bekerja">Bekerja</option>
+                                        <option value="belumbekerja">Belum Bekerja</option>		
+                                    </select>
+        
+                                    @if($errors->has('status'))
+                                        <div class="text-danger">
+                                            {{ $errors->first('status')}}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Masukkan Password" value="{{ old('password') }}">
- 
-                             @if($errors->has('password'))
-                                <div class="text-danger">
-                                    {{ $errors->first('password')}}
-                                </div>
-                            @endif
- 
-                        </div> -->
-
-                        <div class="form-group">
-                            <label>Status</label>
-                                <select class="form-control" name="status">
-                                <option value="">Pilih Status</option>
-                                <option value="bekerja">Bekerja</option>
-                                <option value="belumbekerja">Belum Bekerja</option>		
-                                </select>
- 
-                             @if($errors->has('status'))
-                                <div class="text-danger">
-                                    {{ $errors->first('status')}}
-                                </div>
-                            @endif
- 
-                        </div>
+                        <br>
                         
                         <div class="class-perusahaan">
                                 <div class="row">
@@ -308,60 +307,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                                 <br>
-                                
-
-                                <!-- <div class="form-group">
-                                    <label>Perusahaan</label>
-                                        <select class="form-control" name="id_perusahaan">
-                                            <option value="">Pilih Perusahaan</option>
-                                            @foreach($perusahaan as $p)
-                                            <option value="{{ $p->id_perusahaan }}">{{ $p->nm_perusahaan }}</option>
-                                            @endforeach
-                                        </select>
-        
-                                    @if($errors->has('id_perusahaan'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('id_perusahaan')}}
-                                        </div>
-                                    @endif
-        
-                                </div> -->
-
-                                <!-- <div class="form-group">
-                                    <label>Jabatan</label>
-                                        <select class="form-control" name="id_jabatan">
-                                            <option value="">Pilih Jabatan</option>
-                                            @foreach($jabatan as $j)
-                                            <option value="{{ $j->id_jabatan }}">{{ $j->nm_jabatan }}</option>
-                                            @endforeach
-                                        </select>
-        
-                                    @if($errors->has('id_jabatan'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('id_jabatan')}}
-                                        </div>
-                                    @endif
-        
-                                </div> -->
-
-                                <!-- <div class="form-group">
-                                    <label>Tanggal Masuk Kerja</label>
-                                    <input type="date" name="tgl_masuk" class="form-control" placeholder="" value="{{ old('tgl_masuk') }}">
-        
-                                    @if($errors->has('tgl_masuk'))
-                                        <div class="text-danger">
-                                            {{ $errors->first('tgl_masuk')}}
-                                        </div>
-                                    @endif
-        
-                                </div> -->
-                            </div>
-
-                            <div class="form-group">
-                                <label for="foto" class="form-label">Upload Gambar</label>
-                                <div class="input-group mb-3">
-                                    <input type="file" name="foto" class="form-control" id="foto">
-                                </div>
                             </div>
                         
                         <div class="form-group">
