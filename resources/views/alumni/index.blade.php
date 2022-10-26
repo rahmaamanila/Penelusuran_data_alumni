@@ -77,7 +77,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <thead>
                             <tr class="text-center table-info">
                                 <th>No</th>
-                                <!-- <th>Foto</th> -->
                                 <th>Nik</th>
                                 <th>Nama</th>
                                 <th>Jenis Kelamin</th>
@@ -91,9 +90,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @foreach($alumni as $i => $p)
                             <tr class="text-center">
                                 <td>{{ $i+1 }}</td>
-                                <!-- <td>
-                                  <img src="{{ asset('img/'. $p->foto ) }}" height="10%" width="20%" alt="">
-                                </td> -->
                                 <td>{{ $p->nik }}</td>
                                 <td>{{ $p->nama }}</td>
                                 <td>{{ $p->jenkel }}</td>
