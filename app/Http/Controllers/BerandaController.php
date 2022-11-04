@@ -33,7 +33,22 @@ class BerandaController extends Controller
         // return view('halamandepan.beranda');
         // echo "<pre>"; print_r(session('user_login')); exit;
         
-        $jumlah_alumni = Alumni::all()->count();
+        if($request) {
+            if($request->cari != ''){
+                $jumlah_alumni = Alumni::whereColumn([
+                    ['nama', "<>","Admin"]
+                ])
+                ->Where('nama', "<>","Admin")
+                ->count();
+            }else{
+                $jumlah_alumni = Alumni::Where('nama', "<>","Admin")
+                ->count();
+            }
+            
+        }else{
+           $jumlah_alumni = Alumni::all()->count();
+        }
+        
        $jumlah_lowongan = Lowongan::all()->count();
        $jumlah_event = Event::all()->count();
        $jumlah_perusahaan = Perusahaan::all()->count();
