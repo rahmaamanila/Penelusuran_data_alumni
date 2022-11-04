@@ -68,7 +68,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label>Nama</label>
-                                    <input type="text" name="nama" class="form-control" placeholder="nama alumni .." value="{{ $alumni->nama }}">
+                                    <input type="text" name="nama" class="form-control" placeholder="nama alumni .." value="{{ $alumni->nama }}" autocomplete="off">
         
                                     @if($errors->has('nama'))
                                         <div class="text-danger">
@@ -148,7 +148,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label>No Telepon</label>
-                                    <input type="number" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}">
+                                    <input type="number" name="no_telp" class="form-control" value="{{ $alumni->no_telp }}" autocomplete="off">
         
                                     @if($errors->has('no_telp'))
                                         <div class="text-danger">
@@ -197,7 +197,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label>Angkatan</label>
-                                    <input type="number" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}">
+                                    <input type="number" name="angkatan" class="form-control" value="{{ $alumni->angkatan }}" autocomplete="off">
         
                                     @if($errors->has('angkatan'))
                                         <div class="text-danger">
@@ -213,7 +213,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" value="{{ $alumni->email }}">
+                                    <input type="email" class="form-control" name="email" id="email" value="{{ $alumni->email }}" autocomplete="off">
                                 
                                     @if($errors->has('email'))
                                         <div class="text-danger">
@@ -226,7 +226,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label for="password">Password</label>
-                                    <input type="password" class="form-control" name="password" id="datePickerId" value="{{ $alumni->password }}">
+                                    <input type="password" class="form-control" name="password" id="datePickerId" value="{{ $alumni->password }}" autocomplete="off">
                                 
                                 @if($errors->has('password'))
                                     <div class="text-danger">

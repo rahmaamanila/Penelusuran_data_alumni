@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nama Event</label>
-                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event" value="{{ old('nm_event') }}">
+                            <input type="text" name="nm_event" class="form-control" placeholder="Nama Event" value="{{ old('nm_event') }}" autocomplete="off">
  
                             @if($errors->has('nm_event'))
                                 <div class="text-danger">

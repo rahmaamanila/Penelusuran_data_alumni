@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nama Perusahaan</label>
-                            <input type="text" name="nm_perusahaan" class="form-control" placeholder="Nama Perusahaan" value="{{ $perusahaan->nm_perusahaan}}">
+                            <input type="text" name="nm_perusahaan" class="form-control" placeholder="Nama Perusahaan" value="{{ $perusahaan->nm_perusahaan}}" autocomplete="off">
  
                             @if($errors->has('nm_perusahaan'))
                                 <div class="text-danger">

@@ -52,7 +52,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Nama Jabatan</label>
-                            <input type="text" name="nm_jabatan" class="form-control" placeholder="Nama jabatan">
+                            <input type="text" name="nm_jabatan" class="form-control" placeholder="Nama jabatan" autocomplete="off">
  
                             @if($errors->has('nm_jabatan'))
                                 <div class="text-danger">

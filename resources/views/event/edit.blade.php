@@ -70,32 +70,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 @endif
  
                             </div>
-
-                        <!-- <div class="form-group">
-                            <label>Pembuat</label>
-                                <select class="form-control" name="nik" value="{{ $event->nik }}">
-                                    @foreach($alumni as $p)
-                                      <option value="{{ $p->nik }}">{{ $p->nama }}</option>
-                                    @endforeach -->
-
-                                    <!-- @foreach($alumni as $a)
-                                    @if (session('alumni')->nik === $a->nik)
-                                    <option value="{{ $a->nik }}" selected>{{ $a->nama }}</option>
-                                    @endif
-                                    @endforeach -->
-                                <!-- </select>
- 
-                             @if($errors->has('nik'))
-                                <div class="text-danger">
-                                    {{ $errors->first('nik')}}
-                                </div>
-                            @endif
- 
-                        </div> -->
                         
                         <div class="form-group">
                             <label>Nama Event</label>
-                            <input type="text" class="form-control" name="nm_event" id="nm_event" value="{{ $event->nm_event }}">
+                            <input type="text" class="form-control" name="nm_event" id="nm_event" value="{{ $event->nm_event }}" autocomplete="off">
 
                             @if($errors->has('nm_event'))
                                 <div class="text-danger">

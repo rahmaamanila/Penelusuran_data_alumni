@@ -57,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
  
                         <div class="form-group">
                             <label>Judul</label>
-                            <input type="text" name="judul" class="form-control" placeholder="Judul lowongan" value="{{ $lowongan->judul }}">
+                            <input type="text" name="judul" class="form-control" placeholder="Judul lowongan" value="{{ $lowongan->judul }}" autocomplete="off">
  
                             @if($errors->has('judul'))
                                 <div class="text-danger">
