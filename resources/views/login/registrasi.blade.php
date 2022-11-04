@@ -29,7 +29,7 @@
 
                         <div class="form-group">
                             <label>Nik</label>
-                            <input type="number" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}">
+                            <input type="number" name="nik" class="form-control" placeholder="Nomor Induk Kependudukan" value="{{ old('nik') }}" autocomplete="off">
  
                             @if($errors->has('nik'))
                                 <div class="text-danger">
@@ -40,7 +40,7 @@
 
                         <div class="form-group">
                             <label>Nama</label>
-                            <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" value="{{ old('nama') }}">
+                            <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" value="{{ old('nama') }}" autocomplete="off">
  
                             @if($errors->has('nama'))
                                 <div class="text-danger">
@@ -53,7 +53,7 @@
                             <div class="col-md">
                                 <div class="form-floating">
                                     <label for="tmpt_lahir">Tempat Lahir</label>
-                                    <input type="text" class="form-control" name="tmpt_lahir" id="tmpt_lahir" placeholder="Tempat Lahir" value="{{ old('tmpt_lahir') }}">
+                                    <input type="text" class="form-control" name="tmpt_lahir" id="tmpt_lahir" placeholder="Tempat Lahir" value="{{ old('tmpt_lahir') }}" autocomplete="off">
                                 
                                     @if($errors->has('tmpt_lahir'))
                                         <div class="text-danger">
@@ -114,7 +114,7 @@
 
                         <div class="form-group">
                             <label>No Telepon</label>
-                            <input type="number" name="no_telp" class="form-control" placeholder="Masukkan Nomer Telepon" value="{{ old('no_telp') }}">
+                            <input type="number" name="no_telp" class="form-control" placeholder="Masukkan Nomer Telepon" value="{{ old('no_telp') }}" autocomplete="off">
  
                             @if($errors->has('no_telp'))
                                 <div class="text-danger">
@@ -153,7 +153,7 @@
 
                         <div class="form-group">
                             <label>Angkatan</label>
-                            <input type="number" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}">
+                            <input type="number" name="angkatan" class="form-control" placeholder="Angkatan" value="{{ old('angkatan') }}" autocomplete="off">
         
                             @if($errors->has('angkatan'))
                                 <div class="text-danger">
@@ -164,7 +164,7 @@
 
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" class="form-control" placeholder="Masukkan Email" value="{{ old('email') }}">
+                            <input type="email" name="email" class="form-control" placeholder="Masukkan Email" value="{{ old('email') }}" autocomplete="off">
  
                             @if($errors->has('email'))
                                 <div class="text-danger">
