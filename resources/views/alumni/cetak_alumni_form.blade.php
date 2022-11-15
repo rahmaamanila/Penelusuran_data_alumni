@@ -1,5 +1,4 @@
-@section('menu','mainmenu')
-@section('submenu','alumni1')
+@section('menu','cetak_alumni')
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -51,20 +50,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-md-6">
               <div class="card card-info card-outline">
                 <div class="card-body">
-                      <a href="/alumni" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
+                      <!-- <a href="/alumni" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
                       <br>
-                      <br>
+                      <br> -->
                       <div class="form-group mb-3">
-                          <label>Periode Tahun</label>
-                          <select name="thn_lulus" id="thn_lulus">
+                          <label>Periode Tahun Lulus</label>
+                          <select name="thn_lulus" id="thn_lulus" class="form-control">
                               @for($i=date('Y'); $i>=date('Y')-16; $i-=1)
                                 <option value="{{ $i }}">{{ $i }}</option>
                               @endfor
                           </select>
                       </div>
                       <div>
-                          <a href="#" onclick="this.href='/alumni/cetak_alumni_pertahun/'+document.getElementById('thn_lulus').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
-                          <a href="/alumni/cetak_alumni" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a>
+                          <a href="#" onclick="this.href='/alumni/cetak_alumni_pertahun/'+document.getElementById('thn_lulus').value" target="_blank" class="btn btn-primary"><i class="fas fa-print"></i> Cetak</a>
+                          <!-- <a href="/alumni/cetak_alumni" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a> -->
                       </div>
                   </div>
               </div>

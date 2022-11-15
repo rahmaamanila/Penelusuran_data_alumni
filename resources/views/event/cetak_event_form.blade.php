@@ -1,5 +1,4 @@
-@section('menu','mainmenu')
-@section('submenu','event')
+@section('menu','cetak_event')
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -45,9 +44,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="col-md-6">
               <div class="card card-info card-outline">
                 <div class="card-body">
-                  <a href="/event" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
+                  <!-- <a href="/event" class="btn btn-info"><i class="bi bi-back"></i> Kembali</a>
                       <br>
-                      <br>
+                      <br> -->
                       <div class="input-group mb-3">
                         <label>Tanggal Awal</label>
                         <input type="date" name="tglawal" id="tglawal" class="form-control">
@@ -58,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </div>
                       <div>
                         <a href="#" onclick="this.href='/event/cetak_event_pertanggal/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
-                        <a href="/event/cetak_event" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a>
+                        <!-- <a href="/event/cetak_event" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a> -->
                       </div>
                   </div>
               </div>

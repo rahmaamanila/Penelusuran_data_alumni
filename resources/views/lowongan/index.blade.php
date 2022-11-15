@@ -43,18 +43,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="container">
       @if(session('Data dihapus'))
         <div class="alert alert-danger" role="alert">
+          <!-- <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button> -->
           {{session('Data dihapus')}}
         </div>
         @endif
 
       @if(session('Data diedit'))
         <div class="alert alert-success" role="alert">
+          <!-- <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button> -->
           {{session('Data diedit')}}
         </div>
         @endif
 
       @if(session('Data ditambah'))
         <div class="alert alert-success" role="alert">
+          <!-- <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button>  -->
           {{session('Data ditambah')}}
         </div>
         @endif
@@ -97,6 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @endforeach
                         </tbody>
                     </table>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">&times;</button> 
                 </div>
             </div>
         </div>
@@ -125,5 +129,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 @include('Template.script')
+<script>
+  window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove(); 
+    });
+}, 3000);
+</script>
 </body>
 </html>

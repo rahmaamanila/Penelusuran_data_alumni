@@ -153,14 +153,32 @@
               </li>
             </ul> -->
 
-          <!-- <li class="nav-item">
-            <a href="{{ route('logout') }}" class="nav-link" onclick="return confirm('Apakah Anda Ingin Keluar?')">
-              <i class="nav-icon fas bi-box-arrow-right"></i>
-              <p>
-                Sign Out
-              </p>
+            <!-- <li class="nav-item">
+              <a href="{{ route('logout') }}" class="nav-link" onclick="return confirm('Apakah Anda Ingin Keluar?')">
+                <i class="nav-icon fas bi-box-arrow-right"></i>
+                <p>
+                  Sign Out
+                </p>
+              </a>
+            </li> -->
+          </li>
+          @if (auth()->user()->role == "admin")
+          <li class="nav-item">
+            <a href="/alumni/cetak_alumni_form" class="nav-link {{ e($__env->yieldContent('menu')) == 'cetak_alumni' ? 'active' : '' }}">
+              <i class="fa fa-print nav-icon"></i>
+              <p>Laporan Alumni</p>
             </a>
-          </li> -->
+          </li>
+          @endif
+
+          @if (auth()->user()->role == "admin")
+          <li class="nav-item">
+            <a href="/event/cetak_event_form" class="nav-link {{ e($__env->yieldContent('menu')) == 'cetak_event' ? 'active' : '' }}">
+              <i class="fa fa-print nav-icon"></i>
+              <p>Laporan Event</p>
+            </a>
+          </li>
+          @endif
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

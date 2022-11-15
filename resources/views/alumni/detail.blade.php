@@ -40,15 +40,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- /.content-header -->
 
     <!-- Main content/buat bikin sesuatu -->
-    <div class="container">
-        <div class="card mt-2">
-            <div class="card-body">
+    <div class="container-fluid">
+        <!-- <div class="card mt-2">
+            <div class="card-body"> -->
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card card-info card-outline">
+              <div class="card-body box-profile">
                     <br/>
                                 <div class="mb-3 row">
                                     <img src="{{ asset($alumni->foto == null ? 'img/poto.png' : 'img/'.$alumni->foto) }}" class="profile-user-img img-fluid zoom" height="128px" width="128px" alt="">
                                 </div>
                                 
-                                <div class="row text-center">
+                                <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="nik" class="col-sm-6 col-form-label">Nik</label>
@@ -69,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tempat Lahir</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tempat Lahir</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->tmpt_lahir }}
                                             </div>
@@ -78,10 +82,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row text-center">
+                                <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="nik" class="col-sm-6 col-form-label">Tanggal Lahir</label>
+                                            <label for="nik" class="col-sm-10 col-form-label">Tanggal Lahir</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->tgl_lahir }}
                                             </div>
@@ -90,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Jenis Kelamin</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Jenis Kelamin</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->jenkel }}
                                             </div>
@@ -108,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row text-center">
+                                <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="nik" class="col-sm-6 col-form-label">No Telepon</label>
@@ -138,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
 
-                                <div class="row text-center">
+                                <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="nik" class="col-sm-6 col-form-label">Angkatan</label>
@@ -168,7 +172,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </div>
                                 <br>
                         
-                                <div class="row text-center">
+                                <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
                                             <label for="nik" class="col-sm-6 col-form-label">Perusahaan</label>
@@ -189,7 +193,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tanggal Masuk Kerja</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tanggal Masuk Kerja</label>
                                             <div class="col-sm-12">
                                                 <b>:</b> {{ $alumni->tgl_masuk ?? '-' }}
                                             </div>
@@ -249,6 +253,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.margin{
+    margin-left: 32px;
+}
 </style>
 </body>
 </html>
