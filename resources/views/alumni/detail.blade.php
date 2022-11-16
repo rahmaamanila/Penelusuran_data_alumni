@@ -55,57 +55,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="nik" class="col-sm-6 col-form-label">Nik</label>
+                                            <label for="nik" class="col-sm-6 col-form-label">Nik:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->nik }}
+                                                {{ $alumni->nik }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Nama</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Nama:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->nama }}
+                                                {{ $alumni->nama }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tempat Lahir</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tempat Lahir:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->tmpt_lahir }}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-
-                                <div class="row margin">
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="nik" class="col-sm-10 col-form-label">Tanggal Lahir</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->tgl_lahir }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Jenis Kelamin</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->jenkel }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md">
-                                        <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Agama</label>
-                                            <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->agama }}
+                                                {{ $alumni->tmpt_lahir }}
                                             </div>
                                         </div>
                                     </div>
@@ -115,27 +85,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="nik" class="col-sm-6 col-form-label">No Telepon</label>
+                                            <label for="nik" class="col-sm-10 col-form-label">Tanggal Lahir:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->no_telp }}
+                                                {{ $alumni->tgl_lahir }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Alamat</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Jenis Kelamin:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->alamat }}
+                                                {{ $alumni->jenkel }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tahun Lulus</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Agama:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->thn_lulus }}
+                                                {{ $alumni->agama }}
                                             </div>
                                         </div>
                                     </div>
@@ -145,27 +115,57 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="nik" class="col-sm-6 col-form-label">Angkatan</label>
+                                            <label for="nik" class="col-sm-6 col-form-label">No Telepon:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->angkatan }}
+                                                {{ $alumni->no_telp }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Email</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Alamat:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->email }}
+                                                {{ $alumni->alamat }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Status</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Tahun Lulus:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->status }}
+                                                {{ $alumni->thn_lulus }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <div class="row margin">
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="nik" class="col-sm-6 col-form-label">Angkatan:</label>
+                                            <div class="col-sm-12">
+                                                {{ $alumni->angkatan }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Email:</label>
+                                            <div class="col-sm-12">
+                                                {{ $alumni->email }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Status:</label>
+                                            <div class="col-sm-12">
+                                                {{ $alumni->status }}
                                             </div>
                                         </div>
                                     </div>
@@ -175,27 +175,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="row margin">
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="nik" class="col-sm-6 col-form-label">Perusahaan</label>
+                                            <label for="nik" class="col-sm-6 col-form-label">Perusahaan:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ !empty($alumni->id_perusahaan) ? $alumni->perusahaan->nm_perusahaan : '-'  }}
+                                                {{ !empty($alumni->id_perusahaan) ? $alumni->perusahaan->nm_perusahaan : '-'  }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Jabatan</label>
+                                            <label for="thn_lulus" class="col-sm-6 col-form-label">Jabatan:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ !empty($alumni->id_jabatan) ? $alumni->jabatan->nm_jabatan : '-'  }}
+                                                {{ !empty($alumni->id_jabatan) ? $alumni->jabatan->nm_jabatan : '-'  }}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="col-md">
                                         <div class="form-floating">
-                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tanggal Masuk Kerja</label>
+                                            <label for="thn_lulus" class="col-sm-10 col-form-label">Tanggal Masuk Kerja:</label>
                                             <div class="col-sm-12">
-                                                <b>:</b> {{ $alumni->tgl_masuk ?? '-' }}
+                                                {{ $alumni->tgl_masuk ?? '-' }}
                                             </div>
                                         </div>
                                     </div>
