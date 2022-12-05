@@ -56,7 +56,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <input type="date" name="tglakhir" id="tglakhir" class="form-control">
                       </div>
                       <div>
-                        <a href="#" onclick="this.href='/event/cetak_event_pertanggal/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
+                        <a href="#" onclick="this.href='/event/cetak_event_pertanggal/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" target="_blank" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak</a>
                         <!-- <a href="/event/cetak_event" class="btn btn-primary"><i class="bi bi-printer-fill"></i> Cetak Seluruh Data</a> -->
                       </div>
                   </div>
